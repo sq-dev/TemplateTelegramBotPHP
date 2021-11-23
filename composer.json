@@ -1,0 +1,23 @@
+{
+    "name": "killer/telegram",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/"
+        }
+    },
+    "authors": [
+        {
+            "name": "SQdev-git",
+            "email": "sqmailer@gmail.com"
+        }
+    ],
+    "minimum-stability": "alpha",
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "botman/driver-telegram": "^1.6",
+        "envms/fluentpdo": "^2.2",
+        "badfarm/zanzara": "^0.7.1",
+        "nesbot/carbon": "^2.54"
+    }
+}
