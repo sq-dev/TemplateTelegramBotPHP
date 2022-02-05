@@ -2,6 +2,9 @@
     "name": "killer/telegram",
     "type": "project",
     "autoload": {
+        "files":[
+            "core/Helpers/Config.php"
+        ],
         "psr-4": {
             "Core\\": "core/"
         }
@@ -15,7 +18,6 @@
     "minimum-stability": "alpha",
     "require": {
         "vlucas/phpdotenv": "^5.4",
-        "botman/driver-telegram": "^1.6",
         "envms/fluentpdo": "^2.2",
         "badfarm/zanzara": "^0.7.1",
         "nesbot/carbon": "^2.54"
