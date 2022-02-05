@@ -56,7 +56,7 @@ class Bot
 
             $posts = new Post;
             $activePosts = $posts->connection->from('posts')->where('active', 1)->fetchAll();
-            foreach ($posts->all() as $post ) {
+            foreach ($activePosts as $post ) {
                 $bot->copyMessage(
                     config('bot')->channel['id'], 
                     config('bot')->channel['cache_id'],
