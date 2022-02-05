@@ -5,5 +5,5 @@
 По умолчанию БД SQLite [/core/Database/bot.db]
 
 #Start
-
+composer install
 php main.php
