@@ -1,5 +1,6 @@
 <?php
 
+use Core\Helpers\InlineKeyboard;
 use Zanzara\Config;
 use Zanzara\Zanzara;
 

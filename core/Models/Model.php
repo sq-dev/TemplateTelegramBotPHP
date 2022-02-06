@@ -7,9 +7,8 @@ use Envms\FluentPDO\Query;
 
 use function Core\Helpers\config;
 
-abstract class Model
+abstract class Model extends Query
 {
-    public Query $connection;
 
     public function __construct()
     {
@@ -21,19 +20,21 @@ abstract class Model
             $config->password
         );
 
-        $this->connection = new Query($pdo);
+        parent::__construct($pdo);
+
+        $this->setTableName($this->table());
     }
 
     abstract protected function table();
 
     public function all()
     {
-        return $this->table()->fetchAll();
+        return $this->from()->fetchAll();
     }
 
     public function getById(int $id)
     {
-        return $this->table()->where('id', $id)->fetch();
+        return $this->from()->where('id', $id)->fetch();
     }
 
 }
